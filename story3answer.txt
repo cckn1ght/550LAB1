@@ -1,12 +1,12 @@
 Who is the main character?
-('King', 2)
-Is ('King', 2) male or female?
-('King', 2) is he
-How is ('King', 2)?
+>>O'Toole
+Is O'Toole male or female?
+>>O'Toole is he
+>>How is O'Toole?
 poor
 fine
 old
 How many JJ words in POS?
-22
+>>22
 How many PRP words in POS?
-32
+>>32

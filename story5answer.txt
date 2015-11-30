@@ -1,10 +1,10 @@
 Who is the main character?
-England
+>>England
 Is England male or female?
-England is he
-How is England?
+>>England is he
+>>How is England?
 red
 How many JJ words in POS?
-19
+>>19
 How many PRP words in POS?
-31
+>>31

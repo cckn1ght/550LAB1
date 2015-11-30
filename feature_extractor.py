@@ -11,11 +11,10 @@ import operator
 
 def extrator(filename):
     with open("/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.POS.parsed.txt", 'r') as pos_file:
-        # pos_list = [line.split(" ") for line in pos_file.readlines]
-        pos_list = pos_file.read()
-        pos_list = re.sub('\n',' ',pos_list)
-        pos_list = re.sub('\t',' ',pos_list)
-        pos_list = pos_list.split(" ")
+        pos_list = pos_file.read()     # read file
+        pos_list = re.sub('\n',' ',pos_list)    # remove new line
+        pos_list = re.sub('\t',' ',pos_list)    # remove tab character
+        pos_list = pos_list.split(" ")          # split the line into list by each space
     print "POS list"
     print pos_list
     ###############################################################
@@ -36,37 +35,16 @@ def extrator(filename):
             # depen_list = depen_file.read()
             line = re.sub('\n', '', line)
             line = re.sub('\t', '', line)
-            line = re.sub(r'^ +\(', '(', line)
+            line = re.sub(r'^ +\(', '(', line)      # remove spaces before '('
             penn_list.append(line)
 
-    # treelist = []
-    # temp_line = ''
-    # with open("./stanford/data/sentences.PENN.parsed.txt", 'r') as penn_file:
-    #     for line in penn_file:
-    #         # if it's a blank line
-    #         if re.match(r'^\s*$', line):
-    #             ptree = ParentedTree.fromstring(temp_line)
-    #             treelist.append(ptree)
-    #             temp_line = ''
-    #         else:
-    #             temp_line = temp_line + line
-    #
-    #     print '*****************************'
-    #     # print data
-    #     # ptree = ParentedTree.fromstring(data)
-    # print treelist[0]
-    # leaf_values = treelist[0].leaves()
-    #
-    # if 'unhappy' in leaf_values:
-    #     leaf_index = leaf_values.index('unhappy')
-    #     tree_location = treelist[0].leaf_treeposition(leaf_index)
-    #     print tree_location
-    #     print ptree[0][tree_location]
+
     print "PENN list"
     print penn_list
 
 
     ###############################################################
+    # extrat pos word in list with word and tag tuple
     pos_word_list = []
     for item in pos_list:
         word = item.split('/')
@@ -76,26 +54,28 @@ def extrator(filename):
     print('pos word list:')
     print(pos_word_list)
 
-
+    # extract NNP tagged words and order the list
     pos_nnp = [item[0] for item in pos_word_list if item[1] == 'NNP']
     nnp_counter = Counter(pos_nnp)
     sorted_nnp = nnp_counter.most_common()
 
+    # extract PRP tagged words and order the list
     pos_prp = [item[0] for item in pos_word_list if item[1] == 'PRP']
-
-
     prp_counter = Counter(pos_prp)
     sorted_prp = prp_counter.most_common()
     ##############################################################
 
+    # extract JJ tagged words and order the list
     pos_jj = [item[0] for item in pos_word_list if item[1] == 'JJ']
     jj_coutner = Counter(pos_jj)
     sorted_jj = jj_coutner.most_common()
-    print 'sorted jj words'
-    print sorted_jj
+    # print 'sorted jj words'
+    # print sorted_jj
 
 
     ##########################################################################
+
+    # extract depen words into list with word and tag tuple
     depen_word_list = []
     for item in depen_list:
         item = re.sub('\)', '', item)
@@ -103,7 +83,7 @@ def extrator(filename):
         if word[0] != '':
             depen_word_list.append(word)
 
-
+    # find the amod tagged words and order it
     amod_words = [item[1] for item in depen_word_list if item[0] == 'amod']
     amod_words_list = []
     for i in range(0, len(amod_words)):
@@ -122,7 +102,7 @@ def extrator(filename):
 
 
 
-    print '######################questions################'
+    print '######################Questions################'
     answername = '/Users/Joe/PycharmProjects/550NLTKLab/' + filename + 'answer.txt'
     f = open(answername, 'w')
     # extract named entity relationship
@@ -137,23 +117,23 @@ def extrator(filename):
         name = ner_name[0][0]
 
     f.write('Who is the main character?\n')
-    f.write(str(name)+'\n')
+    f.write('>>' + str(name) + '\n')
 
     f.write('Is ' + str(name) + ' male or female?\n')
-    f.write(str(name) + ' is ' + sorted_prp[0][0]+'\n')
+    f.write('>>' + str(name) + ' is ' + sorted_prp[0][0]+'\n')
     # extract the adjective from POS JJ tag and DEPEN amod tag
     jj_most = [j[0] for j in sorted_jj[:5]]  # extract first 6 words
     adv_most = [a[0] for a in sorted_amod[:5]]
     how = set(jj_most) & set(adv_most)      # find the same ones
-    f.write('How is ' + str(name) + '?\n')
+    f.write('>>' + 'How is ' + str(name) + '?\n')
     for e in how:
         f.write(e+'\n')
 
     f.write('How many JJ words in POS?\n')
-    f.write(str(len(sorted_jj))+'\n')
+    f.write('>>' + str(len(sorted_jj))+'\n')
 
     f.write('How many PRP words in POS?\n')
-    f.write(str(len(pos_prp))+'\n')
+    f.write('>>' + str(len(pos_prp))+'\n')
     f.close()
 
 
