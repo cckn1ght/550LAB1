@@ -1,0 +1,19 @@
+from nltk.tokenize import word_tokenize
+s1=''
+l1=word_tokenize(s1)
+
+for word in l1
+print word
+
+brown=brown.tagged_sents(categories='news')
+unigram_tagger=nltk.UnigramTagger(brown)
+tagged_list=unigram_tagger.tag(l1)
+
+from nltk.corpus import wordnet as wn
+word1="cat"
+result=wn.synsets(word1)
+result
+definition1=wn.synset(word1+'.n.01').definition()
+print definition1
+
+example1=wn.synset(word1+'.n.01').examples()

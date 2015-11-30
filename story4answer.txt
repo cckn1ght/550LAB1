@@ -1,0 +1,11 @@
+Who is the main character?
+Arabia
+Is Arabia male or female?
+Arabia is me
+How is Arabia?
+desolate
+old
+How many JJ words in POS?
+19
+How many PRP words in POS?
+32
