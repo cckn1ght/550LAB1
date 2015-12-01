@@ -1,4 +1,7 @@
+
+
 import re
+import pprint
 import os
 import shutil
 import commands
@@ -11,9 +14,10 @@ import glob
 import math
 import subprocess
 import sets
-from feature_extractor import extrator
 from subprocess import call, Popen, PIPE, STDOUT
 import nltk
+
+############################################################################################################
 
 def run_cmd(cmd):
     arglist = cmd.split()
@@ -24,18 +28,10 @@ def run_cmd(cmd):
 
 ############################################################################################################
 
-def mycommandsfunction(sentence):
+def mycommandsfunction():
 
-    path = "/Users/Joe/PycharmProjects/550NLTKLab/stanford/parser/"
+    path = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/parser'
     os.chdir(path)
-
-    g_add_sentence = "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt"
-    f_add_sentence = open(g_add_sentence,'w')
-    # go to the start of this file
-    f_add_sentence.seek(0)
-    f_add_sentence.write(sentence)
-    f_add_sentence.write('\n')
-    f_add_sentence.close()
 
     stanfordcommandPOS = 'java -cp stanford-parser.jar -mx1024m edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "wordsAndTags" englishPCFG.ser.gz "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt" > "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.POS.parsed.txt"'
     stanfordcommandPENN = 'java -cp stanford-parser.jar -mx1024m edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" englishPCFG.ser.gz "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt" > "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.PENN.parsed.txt"'
@@ -48,19 +44,18 @@ def mycommandsfunction(sentence):
 ##########################################################################################################
 
 def GetSyntacticParseStanfordParser(sentence):
-    g_add_sentence = "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt"
+    g_add_sentence = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt'
     f_add_sentence = open(g_add_sentence,'w')
-    # go to the start of this file
-    f_add_sentence.seek(0)
     f_add_sentence.write(sentence)
     f_add_sentence.write('\n')
     f_add_sentence.close()
 
-    path = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/parser/'
+    path = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/parser'
     os.chdir(path)
 
     stanfordcommandPENN = 'java -cp stanford-parser.jar -mx1024m edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" englishPCFG.ser.gz "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt" > "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.PENN.parsed.txt"'
     os.system(stanfordcommandPENN)
+
 
     g_stanford_parse_PENN = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.PENN.parsed.txt'
     f_stanford_parse_PENN = open(g_stanford_parse_PENN,'r')
@@ -81,12 +76,11 @@ def GetSyntacticParseStanfordParser(sentence):
 def GetDependencyParseStanfordParser(sentence):
     g_add_sentence = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt'
     f_add_sentence = open(g_add_sentence,'w')
-    f_add_sentence.seek(0)
     f_add_sentence.write(sentence)
     f_add_sentence.write('\n')
     f_add_sentence.close()
 
-    path = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/parser/'
+    path = '/Users/Joe/PycharmProjects/550NLTKLab/stanford/parser'
     os.chdir(path)
 
     stanfordcommandDEPEN = 'java -cp stanford-parser.jar -mx1024m edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "typedDependencies" englishPCFG.ser.gz "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.txt" > "/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.DEPEN.parsed.txt"'
@@ -109,31 +103,81 @@ def GetDependencyParseStanfordParser(sentence):
 
 ###########################################################################################################
 
+
+
 ## Main()
 
-#sent = 'Yesterday Joe went to visit Dr. Gerald M. Knapp at the hospital, where his sister, was very sick not two months ago.'
-# the_parse = GetSyntacticParseStanfordParser(sent)
-# my_dependencies_list = GetDependencyParseStanfordParser(sent)
-for i in range(1, 6):
-    filename = 'story' + str(i)
-    with open('/Users/Joe/PycharmProjects/550NLTKLab/' + filename+'.txt', 'r') as news:
-        sent = news.read()
-# sent = "".join(c for c in sent if c not in ('!', '.', ',', ':', ';'))
-    mycommandsfunction(sent)
+sent = 'Today Joe went to visit Dr. Gerald M. Knapp at the hospital, where his sister, was very sick not two months ago.'
+the_parse = GetSyntacticParseStanfordParser(sent)
+my_dependencies_list = GetDependencyParseStanfordParser(sent)
 
-    extrator(filename)
-# GetSyntacticParseStanfordParser(str(sent))
-# GetDependencyParseStanfordParser(str(sent))
-
-
+from nltk.tree import ParentedTree
+treeRC = ParentedTree.fromstring(the_parse)
 # print the_parse
-#treeRC = nltk.Tree(the_parse)
-#myleaves = treeRC.leaves()
-#print myleaves
-#treeRC.draw()
+
+############################################################################
+
+
+##def traverse(t):
+##
+##    try:
+##        t.label()
+##        t.node
+##        #print t.node
+##        #print t.label()
+##    except AttributeError:
+##        df =0
+##    else:
+##        #print t
+##        if t.height() == 2:   #change 2 or 3
+##            #print t
+##            #print t.node
+##            #print t.parent()
+##            ii=8
+##        if t.node == 'VBD' and t.height() == 2:
+##            print t
+##            print t.node
+##        if t.node == 'NP' and t.height() == 3:
+##            print t
+##            print t.node
+##
+##
+##        for child in t:
+##            traverse(child)
+
+def traverse(t):
+    try:
+        t.label()
+
+    except AttributeError:
+        return
+    else:
+        if t.label() == 'NP' and t.height() == 3:
+            print t.leaves
+
+        if t.height() == 2:   #child node
+           # print t.parent()
+            return
+
+        for child in t:
+            traverse(child)
+############################################################################
+
+
+
+traverse(treeRC)
+
+############################################################################
 
 print ''
-# print my_dependencies_list
+print my_dependencies_list
+
+#print treeRC
+#print myleaves
+treeRC.draw()
+############################################################################
+
+
 
 print '<<<<<<<<<<<<DONE>>>>>>>>>>>>'
 

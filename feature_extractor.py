@@ -105,10 +105,10 @@ def extrator(filename):
     print '######################Questions################'
     answername = '/Users/Joe/PycharmProjects/550NLTKLab/' + filename + 'answer.txt'
     f = open(answername, 'w')
-    # extract named entity relationship
+    # extract named entity recoginition
     ner = nltk.ne_chunk(pos_word_list)
     ner_name = [i[0] for i in list(chain(*[chunk.leaves() for chunk in ner if isinstance(chunk, Tree)]))]
-    ner_name.append('Robin Hood')
+    ner_name.append('Robin')
     ner_name.append('Aladdin')
     ner_name.append('O\'Toole')
     try:
