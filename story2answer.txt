@@ -2,9 +2,9 @@ Who is the main character?
 >>Connla
 Is Connla male or female?
 >>Connla is he
->>How is Connla?
-Fiery
-maiden
+How is Connla?
+>>Fiery
+>>maiden
 How many JJ words in POS?
 >>17
 How many PRP words in POS?

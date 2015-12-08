@@ -1,25 +1,652 @@
 (ROOT
   (S
-    (NP (NNP Today) (NNP Joe))
+    (ADVP
+      (NP (NNP Long))
+      (RB ago))
+    (, ,)
+    (PP (IN in)
+      (NP
+        (NP (NNP England))
+        (PP (IN in)
+          (NP (NNP Sherwood)))))
+    (NP (NN forest))
+    (VP (VBP live)
+      (NP (NNP Robin) (NNP Hood)))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (PP (IN As)
+        (NP (DT a) (NN boy)))
+      (NP (NNP Robin))
+      (VP (VBD had)
+        (VP (VBN been)
+          (ADJP (JJ cheated))
+          (PP (IN by)
+            (NP (DT a) (JJ few) (NNS noblemen))))))
+    (CC and)
+    (S
+      (PP (IN since)
+        (NP (RB then)))
+      (NP (PRP he))
+      (VP (VBD had)
+        (VP (VBN decided)
+          (NP
+            (NP (NN hat))
+            (SBAR
+              (S
+                (NP (PRP he))
+                (VP (MD would) (RB not)
+                  (VP (VB spare)
+                    (NP (DT the) (JJ rich))))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (PRP He))
+    (VP (MD would)
+      (VP
+        (VP (VB rob)
+          (NP (DT the) (JJ rich)))
+        (CC and)
+        (VP (VB give)
+          (PP (TO to)
+            (NP (DT the) (JJ poor))))))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP
+        (NP (DT The) (NN Sheriff))
+        (PP (IN of)
+          (NP (NNP Nottingham))))
+      (VP (VBD had)
+        (VP (VBN placed)
+          (NP (JJ many) (NNS rewards))
+          (PP (IN for)
+            (NP
+              (NP (DT the) (NN capture))
+              (PP (IN of)
+                (NP (NNP Robin) (NNP Hood))))))))
+    (CC but)
+    (S
+      (NP (NN nobody))
+      (VP (VBD had)
+        (ADVP (RB ever))
+        (VP (VBN caught)
+          (NP (PRP him)))))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP (NNP Robin) (NNP Hood))
+      (VP (VBD had)
+        (NP
+          (NP (DT a) (NN number))
+          (PP (IN of)
+            (NP
+              (NP (NNS men))
+              (SBAR
+                (WHNP (WP who))
+                (S
+                  (VP (VBD served)
+                    (NP (PRP him))))))))))
+    (: ;)
+    (S
+      (NP (PRP they))
+      (VP (VBD had)
+        (VP (VBN made)
+          (S
+            (NP (PRP him))
+            (NP (PRP$ their) (NN leader))))))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP (PRP They))
+      (VP (VBD acted)
+        (PP (IN as)
+          (NP (NNS informers)))))
+    (: ;)
+    (S
+      (NP (PRP they))
+      (VP (MD would)
+        (VP (VB warn)
+          (NP
+            (NP (NNP Robin) (NNP Hood))
+            (SBAR
+              (WHADVP (WRB whenever))
+              (S
+                (NP (DT the) (NN Sheriff))
+                (VP (VBD had)
+                  (NP (DT any) (JJ new) (NN plan)
+                    (S
+                      (VP (TO to)
+                        (VP (VB catch)
+                          (NP (PRP him)))))))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (JJ rich))
+    (VP (VBD were)
+      (ADJP (VBN scared)
+        (PP (IN of)
+          (S
+            (VP (VBG going)
+              (PP (IN through)
+                (NP (NNP Sherwood) (NNP Forest)))))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD knew)
+            (SBAR
+              (S
+                (NP (NNP Robin) (NNP Hood))
+                (VP (MD would)
+                  (VP (VB attack)))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (NN pressure))
+    (VP (VBD mounted)
+      (PP (IN on)
+        (NP
+          (NP (DT the) (NN Sheriff))
+          (PP (IN of)
+            (NP (NNP Nottingham)))))
+      (S
+        (VP (TO to)
+          (VP (VB capture)
+            (NP (NNP Robin) (NNP Hood))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (PRP He))
     (VP (VBD went)
       (S
         (VP (TO to)
-          (VP (VB visit)
+          (VP (VB take)
             (NP
-              (NP (NNP Dr.) (NNP Gerald) (NNP M.) (NNP Knapp))
-              (PP (IN at)
-                (NP
-                  (NP (DT the) (NN hospital))
-                  (, ,)
-                  (SBAR
-                    (WHADVP (WRB where))
-                    (S
-                      (NP (PRP$ his) (NN sister) (, ,))
-                      (VP (VBD was)
-                        (ADJP (RB very) (JJ sick))
-                        (PP (RB not)
-                          (ADVP
-                            (NP (CD two) (NNS months))
-                            (RB ago)))))))))))))
+              (NP (DT the) (NN help))
+              (PP (IN of)
+                (NP (DT the) (NN king))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (NN king))
+    (VP (VBD refused)
+      (S
+        (VP (TO to)
+          (VP (VB send)
+            (NP
+              (NP (DT any))
+              (PP (IN of)
+                (NP (PRP$ his) (NNS men)
+                  (S
+                    (VP (TO to)
+                      (VP (VB help)
+                        (PP (IN in)
+                          (NP
+                            (NP (DT the) (NN capture))
+                            (PP (IN of)
+                              (NP (NNP Robin) (NNP Hood)))))))))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (ADVP (RB Finally))
+    (, ,)
+    (NP (DT the) (NN Sheriff))
+    (VP (VBD thought)
+      (PP (IN of)
+        (NP (DT a) (NN plan))))
+    (. .)))
+
+(ROOT
+  (S (`` ``)
+    (VP (VB Let)
+      (SBAR
+        (S
+          (NP (PRP us))
+          (VP (VBP have)
+            (NP (DT a) (NN competition)
+              (S
+                (VP (TO to)
+                  (VP (VB choose)
+                    (NP
+                      (NP (DT the) (JJS best) (NN shooter))
+                      (PP (IN in)
+                        (NP (NNP Nottingham))))))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (NNP Robin) (NNP Hood))
+    (VP (MD can) (RB not)
+      (VP (VB resist)
+        (NP (PDT such) (DT a) (NN competition))))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP (PRP He))
+      (VP (MD will)
+        (ADVP (RB surely))
+        (VP (VB come)
+          (PRN (, ,)
+            (SBAR
+              (WHADVP (WRB when))
+              (S
+                (NP (PRP he))
+                (VP (VBZ does))))
+            (, ,))
+          (SBAR
+            (S
+              (NP (PRP$ my) (NNS guards))
+              (VP (MD will)
+                (VP (VB capture)
+                  (NP (PRP him)))))))))
+    (, ,) ('' '')
+    (NP (PRP he))
+    (VP (VBD told)
+      (NP (PRP$ his) (NNS noblemen)))
+    (. .)))
+
+(ROOT
+  (S
+    (NP
+      (NP (DT All))
+      (PP (IN of)
+        (NP (PRP them))))
+    (VP (VBD agreed))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (ADVP (RB Now))
+      (, ,)
+      (NP (NNP Robin) (NNP Hood))
+      (VP (VBD was)
+        (NP (DT an) (JJ excellent) (NN shooter))))
+    (: ;)
+    (S
+      (NP (EX there))
+      (VP (VBD was)
+        (ADJP
+          (ADJP
+            (NP (NN none))
+            (JJR better))
+          (PP (IN than)
+            (NP (PRP him))))
+        (PP (IN with)
+          (NP
+            (NP (DT a) (NN bow)
+              (CC and)
+              (NN arrow))
+            (PP (IN in)
+              (NP
+                (NP (DT the) (NN whole))
+                (PP (IN of)
+                  (NP (NNP Nottingham)))))))))
+    (. .)))
+
+(ROOT
+  (S (CC And)
+    (NP (NNP Robin) (NNP Hood))
+    (VP (MD could)
+      (ADVP (RB surely))
+      (RB not)
+      (VP (VB resist)
+        (S
+          (VP (VBG taking)
+            (NP
+              (NP (NN part))
+              (PP (IN in)
+                (NP (DT any) (NN competition)
+                  (S
+                    (VP (TO to)
+                      (VP (VB prove)
+                        (SBAR (IN that)
+                          (S
+                            (NP (PRP he))
+                            (VP (VBD was)
+                              (NP (DT the) (JJS best)))))))))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP
+      (NP (NNP Robin) (NNP Hood) (POS 's))
+      (JJ loyal) (NNS men))
+    (VP (VBD dissuaded)
+      (NP (PRP him)))
+    (. .)))
+
+(ROOT
+  (SINV (`` ``)
+    (S
+      (ADVP (RB Robin))
+      (, ,)
+      (NP (DT this) (NN competition))
+      (VP (VBZ is)
+        (VP (VBG being)
+          (VP (VBN held)
+            (S
+              (VP (TO to)
+                (VP (NN trap)
+                  (NP (PRP you)))))))))
+    (, ,) ('' '')
+    (VP (VBD said))
+    (NP
+      (NP (CD one))
+      (PP (IN of)
+        (NP (DT the) (NNS men))))
+    (. .)))
+
+(ROOT
+  (SINV (`` ``)
+    (S
+      (NP (PRP It))
+      (VP (MD would)
+        (VP (VB be)
+          (ADJP (JJ foolish)
+            (S
+              (VP (TO to)
+                (VP (VB talk)
+                  (PP (IN into)
+                    (NP
+                      (NP (DT the) (NN lion) (POS 's))
+                      (NN den))))))))))
+    (, ,) ('' '')
+    (VP (VBD said))
+    (NP (DT another))
+    (. .)))
+
+(ROOT
+  (S (CC But)
+    (NP (NNP Robin) (NNP Hood))
+    (VP (VBD was) (RB not)
+      (ADJP (JJ willing)
+        (S
+          (VP (TO to)
+            (VP (VB listen))))))
+    (. .)))
+
+(ROOT
+  (S (CC So)
+    (, ,)
+    (NP (DT the) (JJ next) (NN day))
+    (NP
+      (NP (DT all) (NNS arrangements))
+      (PP (IN for)
+        (NP (DT the) (NN competition))))
+    (VP (VBD were)
+      (VP (VBN made)))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP (DT The) (NNS crowds))
+      (VP (VBD were) (RB all)
+        (VP (VBN seated))))
+    (CC and)
+    (S
+      (NP (CD ten) (NNS contestants))
+      (VP (VBD were)
+        (ADVP (RB there))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (NN Sheriff))
+    (VP
+      (VP (VBD turned)
+        (PP (TO to)
+          (NP
+            (NP (CD one))
+            (PP (IN of)
+              (NP (DT the) (NNS guards))))))
+      (CC and)
+      (VP (VBD asked)
+        (PP (IN in)
+          (NP (DT a) (NN whisper)))
+        (, ,) (`` ``)
+        (SQ (VBZ Has)
+          (NP (NNP Robin))
+          (VP (VBN come)))))
+    (. ?) ('' '')))
+
+(ROOT
+  (S (`` ``)
+    (INTJ (UH No))
+    (, ,)
+    (NP (PRP$ Your) (NNS Highness))
+    (, ,)
+    (NP (NNP Robin))
+    (VP (VBZ has)
+      (NP (JJ red) (NN hair)))
+    (. .)))
+
+(ROOT
+  (S
+    (NP
+      (NP (NN None))
+      (PP (IN of)
+        (NP (DT the) (NNS contestants))))
+    (VP (VBP have)
+      (NP (JJ red) (NN hair)))
+    (. .) ('' '')))
+
+(ROOT
+  (S
+    (NP (DT The) (NN Sheriff))
+    (VP (VBD said) (, ,) (`` ``)
+      (S
+        (NP (PRP He))
+        (VP (MD must)
+          (VP (VB be)
+            (ADJP (VBN scared))))))
+    (. .) ('' '')))
+
+(ROOT
+  (S
+    (NP (DT The) (NN competition))
+    (VP (VBD began))
+    (. .)))
+
+(ROOT
+  (S
+    (NP
+      (NP
+        (NP (NNP William))
+        (, ,)
+        (NP
+          (NP (DT the) (NN Sheriff) (POS 's))
+          (NN man))
+        (, ,)
+        (SBAR
+          (WHNP (WP who))
+          (S
+            (VP (VBD had)
+              (ADVP (RB also))
+              (VP (VBN participated))))))
+      (CC and)
+      (NP
+        (NP (NN man))
+        (PP (IN in)
+          (NP (DT a) (JJ green) (NN outfit)))))
+    (VP (VBD were)
+      (VP (VBG vying)
+        (PP (IN for)
+          (NP
+            (NP (DT the) (JJ first) (NN prize))
+            (, ,)
+            (NP (DT a) (JJ golden) (NN arrow))
+            (, ,)))
+        (PP (IN after)
+          (NP (CD ten) (NNS rounds)))))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP (PRP It))
+      (VP (VBD was)
+        (NP
+          (NP (NN time))
+          (PP (IN for)
+            (NP (DT the) (JJ last) (NN arrow)
+              (S
+                (VP (TO to)
+                  (VP (VB be)
+                    (VP (VBN shot))))))))))
+    (: ;)
+    (S
+      (NP
+        (NP (DT the) (NN winner))
+        (PP (IN of)
+          (NP (DT this) (NN round))))
+      (VP (MD would)
+        (VP (VB be)
+          (VP (VBN declared)
+            (NP
+              (NP (DT the) (JJS best) (NN shooter))
+              (PP (IN in)
+                (NP (NNP Nottingham))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (NP (NNP William))
+      (VP
+        (VP (VBD took)
+          (NP (NN aim))
+          (ADVP (RB first)))
+        (CC and)
+        (VP (VBD shot))))
+    (: ;)
+    (S
+      (NP (PRP it))
+      (VP (VBD was)
+        (ADJP (RB very) (JJ close)
+          (PP (TO to)
+            (NP (DT the) (NN center))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (NN Sheriff))
+    (VP (VBD applauded))
+    (. .)))
+
+(ROOT
+  (S (`` ``)
+    (FRAG
+      (INTJ (JJ Good) (NN shot))
+      (, ,)
+      (NP (NNP William)))
+    (, ,) ('' '')
+    (NP (PRP he))
+    (VP (VBD said))
+    (. .)))
+
+(ROOT
+  (S
+    (S
+      (ADVP (RB Then))
+      (NP (PRP it))
+      (VP (VBD was)
+        (NP
+          (NP (DT the) (NN turn))
+          (PP (IN of)
+            (NP
+              (NP (DT the) (NN man))
+              (PP (IN in)
+                (NP (NN green))))))))
+    (: ;)
+    (S
+      (NP (PRP he))
+      (VP (VBD let)
+        (VP (VB go)
+          (PP (IN of)
+            (NP (PRP$ his) (NN arrow))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (NN crowd))
+    (VP (VBD cheered)
+      (ADVP (RB hysterically)))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (PRP It))
+    (VP (VBD went)
+      (PP (IN through)
+        (NP
+          (NP
+            (NP (NNP William) (POS 's))
+            (NN arrow))
+          (CC and)
+          (NP
+            (NP (NN bull) (POS 's))
+            (NN eye)))))
+    (. .)))
+
+(ROOT
+  (S (CC And)
+    (PP (IN within)
+      (NP (DT a) (NN flash)))
+    (NP
+      (NP (DT the) (NN man))
+      (PP (IN in)
+        (NP (NN green))))
+    (VP (VBD let)
+      (VP (VB go)
+        (PP (IN of)
+          (NP
+            (NP (CD two) (JJR more) (NNS arrows))
+            (SBAR
+              (WHNP (WDT which))
+              (S
+                (VP (VBD came)
+                  (S
+                    (VP (VBG flying)
+                      (PP (IN towards)
+                        (NP
+                          (NP (DT the) (NN chair))
+                          (SBAR
+                            (WHPP (IN on)
+                              (WHNP (WDT which)))
+                            (S
+                              (NP (DT the) (NN Sheriff))
+                              (VP (VBD sat)
+                                (CC and)
+                                (VBD stuck)
+                                (PP (IN on)
+                                  (NP
+                                    (NP (DT either) (NN side))
+                                    (PP (IN of)
+                                      (NP (PRP it)))))))))))))))))))
+    (. .)))
+
+(ROOT
+  (S
+    (NP (DT The) (NN Sheriff))
+    (VP (VBD was)
+      (ADJP (JJ stunned)))
     (. .)))
 

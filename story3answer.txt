@@ -2,10 +2,10 @@ Who is the main character?
 >>O'Toole
 Is O'Toole male or female?
 >>O'Toole is he
->>How is O'Toole?
-poor
-fine
-old
+How is O'Toole?
+>>poor
+>>fine
+>>old
 How many JJ words in POS?
 >>22
 How many PRP words in POS?

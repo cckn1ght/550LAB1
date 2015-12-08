@@ -2,9 +2,9 @@ Who is the main character?
 >>Cinderella
 Is Cinderella male or female?
 >>Cinderella is she
->>How is Cinderella?
-lovely
-unhappy
+How is Cinderella?
+>>lovely
+>>unhappy
 How many JJ words in POS?
 >>20
 How many PRP words in POS?

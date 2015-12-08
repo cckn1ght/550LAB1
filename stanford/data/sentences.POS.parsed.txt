@@ -52,7 +52,7 @@ None/NN of/IN the/DT contestants/NNS have/VBP red/JJ hair/NN ./. ''/''
 
 The/DT Sheriff/NN said/VBD ,/, ``/`` He/PRP must/MD be/VB scared/VBN ./. ''/''
 
-image/NN :/: http://www.kidsgen.com/stories/classic_stories/images/robin-hood.jpg/JJ Robin/NNP Hood/NNP competingThe/NN competition/NN began/VBD ./.
+The/DT competition/NN began/VBD ./.
 
 William/NNP ,/, the/DT Sheriff/NN 's/POS man/NN ,/, who/WP had/VBD also/RB participated/VBN and/CC man/NN in/IN a/DT green/JJ outfit/NN were/VBD vying/VBG for/IN the/DT first/JJ prize/NN ,/, a/DT golden/JJ arrow/NN ,/, after/IN ten/CD rounds/NNS ./.
 

@@ -8,8 +8,14 @@ import string
 from collections import Counter
 from itertools import chain
 import operator
+from nltk.tag import StanfordNERTagger
+from nltk.tree import ParentedTree
 
 def extrator(filename):
+
+
+############################################################################
+
     with open("/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.POS.parsed.txt", 'r') as pos_file:
         pos_list = pos_file.read()     # read file
         pos_list = re.sub('\n',' ',pos_list)    # remove new line
@@ -29,19 +35,46 @@ def extrator(filename):
     print "dependency list"
     print depen_list
     ##############################################################
+    penn_string = ''
     penn_list = []
     with open("/Users/Joe/PycharmProjects/550NLTKLab/stanford/data/sentences.PENN.parsed.txt", 'r') as penn_file:
         for line in penn_file:
             # depen_list = depen_file.read()
-            line = re.sub('\n', '', line)
-            line = re.sub('\t', '', line)
-            line = re.sub(r'^ +\(', '(', line)      # remove spaces before '('
-            penn_list.append(line)
+            # line = re.sub(r'^ +\(', '(', line)      # remove spaces before '('
+            if line != '\n':
+                penn_string += line
+            else:
+                penn_string = re.sub('\n', '', penn_string)
+                penn_string = re.sub('\t', '', penn_string)
+                penn_list.append(penn_string)
+                penn_string = ''
 
+        # penn_string = re.sub('\n', '', penn_string)
+        # penn_string = re.sub('\t', '', penn_string)
+    tree_list = []
+    for item in penn_list:
+        treeRC = ParentedTree.fromstring(item)
+        tree_list.append(treeRC)
 
-    print "PENN list"
-    print penn_list
+    def traverse(t):
+        try:
+            t.label()
 
+        except AttributeError:
+            return
+        else:
+            if t.label() == 'ADVP' and t.height() == 3:
+                print t.leaves
+
+            if t.height() == 2:   #child node
+               # print t.parent()
+                return
+
+            for child in t:
+                traverse(child)
+    # for item in tree_list:
+    #     print 'TREEEEEEEE'
+    #     traverse(item)
 
     ###############################################################
     # extrat pos word in list with word and tag tuple
@@ -125,9 +158,9 @@ def extrator(filename):
     jj_most = [j[0] for j in sorted_jj[:5]]  # extract first 6 words
     adv_most = [a[0] for a in sorted_amod[:5]]
     how = set(jj_most) & set(adv_most)      # find the same ones
-    f.write('>>' + 'How is ' + str(name) + '?\n')
+    f.write('How is ' + str(name) + '?\n')
     for e in how:
-        f.write(e+'\n')
+        f.write('>>' + e + '\n')
 
     f.write('How many JJ words in POS?\n')
     f.write('>>' + str(len(sorted_jj))+'\n')
